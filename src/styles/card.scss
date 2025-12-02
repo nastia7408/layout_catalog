@@ -2,15 +2,17 @@
   box-sizing: border-box;
   width: $card-width;
   border-radius: $border-radius;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $border-color;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: $spacing-sm;
+  transition: transform $transform-time;
 
   &:hover {
     transform: scale(1.2);
   }
+
   &__photo {
     display: block;
     width: $photo-width;
@@ -30,6 +32,11 @@
     line-height: $line-height-sm;
     padding-bottom: $spacing-xs;
     margin: 0;
+    transition: color $transform-time;
+    
+    .card:hover & {
+      color: $card-name-color;
+    }
   }
 
   &__code {
@@ -99,6 +106,7 @@
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
+    transition: all $transform-time;
 
     &:hover {
       background-color: $color-white;
@@ -108,6 +116,3 @@
   }
 }
 
-.card:hover .card__name {
-  color: #34568b;
-}

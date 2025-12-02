@@ -1,15 +1,9 @@
 .container {
   display: grid;
-  gap: 48px 46px;
+  gap: $grid-gap;
   grid-template-columns: repeat(1, 200px);
   justify-content: center;
-  margin: 50px 40px;
-}
-
-@media (min-width: 300px) {
-  .container {
-    grid-template-columns: repeat(1, 200px);
-  }
+  padding: $grid-pading;
 }
 
 @media (min-width: 488px) {
